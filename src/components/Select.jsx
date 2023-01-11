@@ -5,6 +5,9 @@ import { FormContext } from '../utils/FormContext';
 
 const SelectInput = ({label, type, name, options, required}) => {
   const [country, setcountry] = useState('');
+  const handleChangeCountry = () => {
+    setcountry()
+  }
 
   const { handleChange } = useContext(FormContext)
 
@@ -13,10 +16,10 @@ const SelectInput = ({label, type, name, options, required}) => {
       <FormLabel>{label}</FormLabel>
         <Select
           name={name}
-          value={country}
-          onChange={e => handleChange(name, e)}
+          onChange={e => handleChange(name, type, e)}
           isRequired={required}
         >
+          <option value={''} >Selecciona una opción</option>
             {options ? options?.map((option) =>
                 <option key={option.value} value={option.value}>{option.label}</option>
             ) : null}

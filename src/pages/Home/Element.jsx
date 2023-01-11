@@ -4,7 +4,7 @@ import Input from "../../components/Input";
 import SelectInput from "../../components/Select";
 import SubmitButton from "../../components/SubmitButton";
 
-const Element = ({type, label, name, required, options}) => {
+const Element = ({type, label, name, required, options, value}) => {
   switch (type) {
     case "text":
       return (
@@ -13,6 +13,7 @@ const Element = ({type, label, name, required, options}) => {
           name={name}
           required={required}
           type={type}
+          value={value}
         />
       );
 
@@ -23,6 +24,7 @@ const Element = ({type, label, name, required, options}) => {
           name={name}
           required={required}
           type={type}
+          value={value}
         />
       );
 
@@ -33,6 +35,7 @@ const Element = ({type, label, name, required, options}) => {
           name={name}
           required={required}
           type={type}
+          value={value}
         />
       );
 
@@ -43,6 +46,7 @@ const Element = ({type, label, name, required, options}) => {
           name={name}
           required={required}
           type={type}
+          value={value}
         />
       );
 
@@ -53,6 +57,7 @@ const Element = ({type, label, name, required, options}) => {
           name={name}
           required={required}
           type={type}
+          value={value}
           options={options}
         />
       );

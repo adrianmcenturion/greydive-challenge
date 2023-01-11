@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Spinner from "../components/UI/Spinner/Spinner";
 
 const Home = lazy(() => import("../pages/Home/Home"));
@@ -12,7 +12,7 @@ function AppRouter() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<>NOT FOUND</>} />
+          <Route path="*" element={<Home />} />
           <Route path='results' element={<Results />} />
         </Routes>
       </BrowserRouter>
